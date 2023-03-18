@@ -17,16 +17,17 @@ int main(){
     	min_heap.push(size);
 	}
 	
-	
+	int count=0;
 	while(min_heap.size()!=1){
 		first = min_heap.top();
 		min_heap.pop();
 		sec = min_heap.top();
 		min_heap.pop();
 		sum = first+sec;
+		count+=sum;
 		min_heap.push(sum);
 	}
-	cout<<"NO. OF MOVES: "<<min_heap.top()<<endl;
+	cout<<"NO. OF MOVES: "<<count<<endl;
 	min_heap.pop();
 	
 	return 0;
